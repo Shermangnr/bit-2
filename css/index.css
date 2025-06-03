@@ -77,7 +77,35 @@ header {
 }
 
 h1 {
-  text-align: center;
+  text-align: start;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cont-desc {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.cont-buscador {
+  align-content: center;
+    justify-content: center;
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+.desc {
+  width: 100%;
+}
+
+#studentContainer {
+  gap: 20px;
 }
 
 .card-container {
@@ -94,7 +122,7 @@ h1 {
 }
 
 .buscador {
-  width: 30% !important;
+  width: 100%;
   border-radius: 25px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -104,7 +132,7 @@ h1 {
   background-color: #fff;
   background-image: url(../assets/images/bg-card.png);
   background-size: cover;
-  border-radius: 12px;
+  border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s;
@@ -127,8 +155,9 @@ h1 {
 }
 
 .card-img-top {
+  box-shadow: 2px 2px 15px 1px;
   border-radius: 50%;
-  border: 10px solid #042ea2;
+  border: 5px inset #8c52ff;
   width: 50%;
   height: auto;
   object-fit: cover;
@@ -161,3 +190,348 @@ h1 {
 footer {
   background: linear-gradient(180deg, rgba(0, 57, 112, 1) 0%, rgba(12, 14, 16, 1) 100%);
 }
+
+/* Media query para pantallas de 992px o más */
+@media (max-width: 992px) {
+
+    /* Ajustes para el header */
+    .header {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .header .header-logo {
+        margin-left: calc(max(2%, (100% - 1280px) / 2));
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .header .header-menu {
+        margin-right: calc(max(2%, (100% - 1280px) / 2)); 
+        width: auto;
+    }
+
+    .header .header-menu ul {
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .header .header-option {
+        height: 40px;
+        padding: 0;
+        border-bottom: solid 3px transparent;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    /* Ajustes para el título y el buscador */
+    .titulo {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .cont-buscador {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para la descripción */
+    .cont-desc {
+        margin-top: 20px;
+    }
+
+    .desc {
+        text-align: left;
+    }
+
+    /* Ajustes para las tarjetas de estudiantes */
+    #studentContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para el modal */
+    .modal-dialog {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+/* Media Query para pantallas de 768 o más*/
+@media (max-width: 768px) {
+
+    /* Ajustes para el header */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .header .header-logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .header .header-menu {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .header .header-menu ul {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .header .header-option {
+        height: auto;
+        padding: 10px 0;
+        border-bottom: none;
+    }
+
+    .container {
+      margin-top: 200px;
+    }
+
+    /* Ajustes para el título y el buscador */
+    .titulo {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cont-buscador {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para la descripción */
+    .cont-desc {
+        margin-top: 0;
+    }
+
+    .desc {
+        text-align: center;
+    }
+
+    /* Ajustes para las tarjetas de estudiantes */
+    #studentContainer {
+        flex-direction: row; 
+        flex-wrap: wrap;    
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        gap: 10px;
+    }
+
+    /* Ajustes para el modal */
+    .modal-dialog {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+/* Media query para pantallas de 576px o más */
+@media (max-width: 576px) {
+
+    /* Ajustes para el header */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .header .header-logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .header .header-menu {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .header .header-menu ul {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .header .header-option {
+        height: auto;
+        padding: 10px 0;
+        border-bottom: none;
+    }
+
+    .container {
+      margin-top: 200px;
+    }
+
+    /* Ajustes para el título y el buscador */
+    .titulo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cont-buscador {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para la descripción */
+    .cont-desc {
+        margin-top: 0;
+    }
+
+    .desc {
+        text-align: center;
+    }
+
+    /* Ajustes para las tarjetas de estudiantes */
+    #studentContainer {
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        margin-left: 0px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 70%;
+        max-width: 400px;
+        margin-bottom: 20px;
+        margin-left: 85px;
+    }
+
+    .card-body {
+      padding: 10px;
+    }
+
+    /* Ajustes para el modal */
+    .modal-dialog {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+/* Media query para pantallas de 575px o menos */
+@media (max-width: 575px) {
+
+    /* Ajustes para el header */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .header .header-logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .header .header-menu {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .header .header-menu ul {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .header .header-option {
+        height: auto;
+        padding: 10px 0;
+        border-bottom: none;
+    }
+
+    .container {
+      margin-top: 200px;
+    }
+
+    /* Ajustes para el título y el buscador */
+    .titulo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cont-buscador {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para la descripción */
+    .cont-desc {
+        margin-top: 0;
+    }
+
+    .desc {
+        text-align: center;
+    }
+
+    /* Ajustes para las tarjetas de estudiantes */
+    #studentContainer {
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        margin-left: 0px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 70%;
+        max-width: 400px;
+        margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+    }
+
+    .card-body {
+      padding: 10px;
+    }
+
+    /* Ajustes para el modal */
+    .modal-dialog {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+}
+

@@ -41,24 +41,32 @@
     </header>
 
     <div class="container py-5">
-        <div class="mt-4 text-center">
-            <h1 class="mb-3">Nuestro estudiantes</h1>
-            <p class="lead">
-                Aquí podrás encontrar el listado de estudiantes que están cursando el Bootcamp de Desarrollo Web
-                Fullstack.
-            </p>
-            <p class="lead">Además, puedes revisar sus perfiles de GitHub y ver el avance de sus proyectos.</p>
+        <div class="titulo mt-5 d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+            <div>
+                <h1 class="mb-3">Nuestros estudiantes</h1>
+            </div>
+            <!-- Buscador -->
+            <div class="mb-4 cont-buscador">
+                <input type="text" id="searchInput" class="form-control buscador" placeholder="Buscar estudiante por nombre o código...">
+            </div>
         </div>
 
-        <!-- Buscador -->
-        <div class="mb-4 d-flex justify-content-end">
-            <input type="text" id="searchInput" class="form-control buscador"
-                placeholder="Buscar estudiante por nombre o código...">
+        <div class="mt-2 my-4 cont-desc">
+            <div class="desc text-center">
+                <div>
+                    <p class="m-1" style="font-size: large;">
+                        Aquí podrás encontrar el listado de estudiantes que están cursando el Bootcamp de Desarrollo Web
+                        Fullstack. 
+                    </p>
+                    <p class="m-1" style="font-size: large;">Además, puedes revisar sus perfiles de GitHub y ver el avance de sus proyectos.</p>
+                </div>
+            </div>
         </div>
-        <div id="noResultsMessage" class="alert alert-warning mt-2" style="display: none;"></div>
+
+        
 
         <!-- Contenedor de tarjetas -->
-        <div id="studentContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4"></div>
+        <div id="studentContainer" class="row studentContainer"></div>
         <div class="text-center mt-4">
             <button id="loadMoreBtn" class="btn btn-primary">Mostrar más</button>
             <button id="loadLessBtn" class="btn btn-secondary" style="display: none;">Mostrar menos</button>
